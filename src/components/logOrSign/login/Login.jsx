@@ -6,7 +6,6 @@ const Login = () => {
       <h2>Login</h2>
       <form className="inputWrap">
         <input placeholder="username" />
-        <input placeholder="email" />
         <input placeholder="password" />
         <button type="submit">submit</button>
       </form>
