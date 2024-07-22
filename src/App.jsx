@@ -1,11 +1,11 @@
 import "./App.css";
 
-function App() {
-  console.log(import.meta.env.VITE_COOL_TEST);
+import Layout from "./components/layout/Layout";
 
+function App() {
   return (
     <>
-      <h1>{import.meta.env.VITE_COOL_TEST}</h1>
+      <Layout />
     </>
   );
 }
