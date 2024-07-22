@@ -3,7 +3,8 @@ import "./Signup.css";
 const Signup = () => {
   return (
     <div className="signupWrap">
-      <form>
+      <h2>Sign up</h2>
+      <form className="inputWrap">
         <input placeholder="username" />
         <input placeholder="email" />
         <input placeholder="password" />

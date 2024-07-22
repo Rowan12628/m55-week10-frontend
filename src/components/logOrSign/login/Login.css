@@ -1,0 +1,8 @@
+.loginWrap {
+  border: 2px solid red;
+}
+
+.inputWrap {
+  display: flex;
+  flex-direction: column;
+}
