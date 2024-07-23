@@ -1,4 +1,4 @@
-const signup = async (username, email, password) => {
+export const signup = async (username, email, password) => {
   const res = await fetch("http://localhost:5001/users/signup", {
     method: "POST",
     mode: "cors",
@@ -12,5 +12,3 @@ const signup = async (username, email, password) => {
   console.log(data);
   return data;
 };
-
-module.exports = { signup };
