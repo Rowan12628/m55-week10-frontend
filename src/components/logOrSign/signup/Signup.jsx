@@ -9,31 +9,34 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  //   const changeHandler = (event, setter, state) => {
-  //     setter(event.target.value);
-  //     console.log(state);
-  //   };
+  const changeHandler = (event, setter) => {
+    setter(event.target.value);
+  };
 
-  const submitHandler = async (event, username, email, password) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
-    console.log("submit handler");
+    console.log("submit handler signup");
 
-    await signup({ username, email, password });
+    const data = await signup(username, email, password);
+    console.log("data in signup: ", data);
   };
 
   return (
     <div className="signupWrap">
       <h2>Sign up</h2>
-      <form
-        className="inputWrap"
-        onSubmit={(event) => submitHandler(event, username, email, password)}
-      >
+      <form className="inputWrap" onSubmit={submitHandler}>
         <input
-          //   onChange={(event) => changeHandler(event, username, setUsername)}
+          onChange={(event) => changeHandler(event, setUsername)}
           placeholder="username"
         />
-        <input placeholder="email" />
-        <input placeholder="password" />
+        <input
+          onChange={(event) => changeHandler(event, setEmail)}
+          placeholder="email"
+        />
+        <input
+          onChange={(event) => changeHandler(event, setPassword)}
+          placeholder="password"
+        />
         <button type="submit">submit</button>
       </form>
     </div>
