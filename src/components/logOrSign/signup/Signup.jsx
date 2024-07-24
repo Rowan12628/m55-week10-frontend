@@ -3,15 +3,12 @@ import "./Signup.css";
 import { signup } from "../../../utils/fetch";
 
 import { useState } from "react";
+import { changeHandler } from "../../../utils/helpers";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const changeHandler = (event, setter) => {
-    setter(event.target.value);
-  };
 
   const submitHandler = async (event) => {
     event.preventDefault();
