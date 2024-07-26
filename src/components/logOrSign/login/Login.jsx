@@ -5,7 +5,7 @@ import { changeHandler } from "../../../utils/helpers";
 
 import { useState } from "react";
 
-const Login = () => {
+const Login = ({ setLogSign }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,6 +18,9 @@ const Login = () => {
 
     setUsername();
     setPassword();
+
+    setLogSign.setIsLoggedIn(true);
+    setLogSign.setUserLogged({ username });
   };
 
   return (
