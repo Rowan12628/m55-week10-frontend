@@ -5,7 +5,7 @@ import { signup } from "../../../utils/fetch";
 import { useState } from "react";
 import { changeHandler } from "../../../utils/helpers";
 
-const Signup = () => {
+const Signup = ({ setLogSign }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,6 +16,9 @@ const Signup = () => {
 
     const data = await signup(username, email, password);
     console.log("data in signup: ", data);
+
+    setLogSign.setIsLoggedIn(true);
+    setLogSign.setUserLogged({ username });
   };
 
   return (

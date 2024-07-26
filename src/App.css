@@ -18,3 +18,10 @@
 .read-the-docs {
   color: #888;
 }
+
+.logSignWrap {
+  border: 2px solid blue;
+  display: flex;
+  height: 40vh;
+  justify-content: space-evenly;
+}

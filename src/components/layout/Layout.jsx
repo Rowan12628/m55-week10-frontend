@@ -2,17 +2,16 @@ import "./Layout.css";
 
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import LogOrSign from "../logOrSign/LogOrSign/LogOrSign";
 import ImageDisplay from "../imageDisplay/ImageDisplay";
 
-const Layout = () => {
+const Layout = ({ children, userLogged }) => {
   return (
-    <>
-      <Header />
-      <LogOrSign />
+    <div>
+      <Header userLogged={userLogged} />
+      {children}
       <ImageDisplay />
       <Footer />
-    </>
+    </div>
   );
 };
 
