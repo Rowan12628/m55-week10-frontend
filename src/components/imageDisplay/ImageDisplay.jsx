@@ -31,7 +31,7 @@ const ImageDisplay = () => {
       {images.map((image, index) => {
         return (
           <div key={index}>
-            <img src={image.imagesUrl} alt={image.id}></img>
+            <img src={image.urls.small} alt={image.id}></img>
           </div>
         );
       })}
