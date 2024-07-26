@@ -20,8 +20,10 @@ function App() {
   return (
     <>
       <Layout userLogged={userLogged}>
-        <Signup setLogSign={setLogSign} />
-        <Login setLogSign={setLogSign} />
+        <div className="logSignWrap">
+          <Signup setLogSign={setLogSign} />
+          <Login setLogSign={setLogSign} />
+        </div>
       </Layout>
     </>
   );
