@@ -27,14 +27,20 @@ const ImageDisplay = () => {
 
   return (
     <div className="imgDisWrap">
-      <h2>image</h2>
-      {images.map((image, index) => {
-        return (
-          <div key={index}>
-            <img src={image.urls.small} alt={image.id}></img>
-          </div>
-        );
-      })}
+      <h2>images :)</h2>
+      <div className="imgWrap">
+        {images.map((image, index) => {
+          return (
+            <div key={index}>
+              <img
+                className="image"
+                src={image.urls.small}
+                alt={image.id}
+              ></img>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

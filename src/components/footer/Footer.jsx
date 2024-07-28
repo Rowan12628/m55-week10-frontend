@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <header className="footerWrap">
-        <h2>footer</h2>
+        <h2>enjoy the app!</h2>
       </header>
     </>
   );

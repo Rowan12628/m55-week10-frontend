@@ -1,3 +1,17 @@
 .imgDisWrap {
   border: 2px solid red;
 }
+
+.imgWrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 2px solid purple;
+  justify-content: space-between;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+}
